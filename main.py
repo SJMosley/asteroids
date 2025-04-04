@@ -16,14 +16,16 @@ def main():
             if event.type == pygame.QUIT:
                 return
         #Start - Screen Prep
+        player.update(dt)
         screen.fill("black")
         #End - Screen Prep
+
 
         player.draw(screen)
 
         #Start - End of loop iteration
-        dt = clock.tick(60)/1000
         pygame.display.flip()
+        dt = clock.tick(60)/1000
         #End - End of loop iteration
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
